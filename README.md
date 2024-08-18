@@ -1,3 +1,5 @@
 # spectrogram
 
-Webfrontend for creating realtime waterfall spectrograms.
+Webfrontend for realtime waterfall spectrograms.
+
+[Online demo](https://naturseptime.github.io/spectrogram/)
