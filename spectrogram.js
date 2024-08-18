@@ -79,7 +79,7 @@ function initFFTWindow() {
         let x = i / (fftSize - 1) * Math.PI * 2.0;
         // Blackman-Nuttall-window
         let y = 0.3635819 - 0.4891775 * Math.cos(x) + 0.1365995 * Math.cos(x * 2.0) - 0.0106411 * Math.cos(x * 3.0);
-        fftWindow[i] = y * 2.0 / fftSize * amplifyFactor;
+        fftWindow[i] = y * 2.0 / fftSize;
     }
     return fftWindow;
 }
@@ -97,6 +97,7 @@ function processSamples(samples) {
             
             for(let j = 0; j < spectrum.length; ++j) {
                 spectrum[j] = Math.hypot(fftOutput[j * 2], fftOutput[j * 2 + 1]);
+                spectrum[j] *= Math.sqrt(j) * amplifyFactor;
             }
             drawColumn(spectrum);
             
