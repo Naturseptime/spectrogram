@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>Realtime Waterfall Spectrogram</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<body>
+  <div id="information">
+    Waterfall Spectrogram 
+    <small><a href="https://github.com/Naturseptime/spectrogram">(source code)</small></a>
+  </div>
+  <div id="spectrogram">
+	<canvas id="myCanvas" width="1200" height="500"></canvas> 
+  </div>
+  <div id="buttons">
+    <button id="record-button" class="toggle">Record</button>
+    <button id="clear-button">Clear</button>
+    <button id="labels-button" class="toggle active">Labels</button>
+    <button id="fullscreen-button">Fullscreen</button>
+  </div>
+  <script src="fft.js"></script>
+  <script src="spectrogram.js"></script>
+</body>
+</html>

@@ -1,2 +1,3 @@
 # spectrogram
-Realtime Waterfall Spectrograms
+
+Webfrontend for creating realtime waterfall spectrograms.
